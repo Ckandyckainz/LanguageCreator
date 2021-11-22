@@ -7,33 +7,41 @@
                 background-color: #88FFCC;
                 margin: 2%;
                 font-family: 'Times New Roman', Times, serif;
+                font-weight: bold;
             }
             h1{
-                font-size: 4em;
+                font-size: 6em;
                 color: #0000BB;
                 margin: 20px;
-                text-shadow: 4px 4px white, 2px 2px 20px #0000FF;
-                font-weight: bold;
+                text-shadow: 6px 6px white, 3px 3px 30px #0000FF;
             }
             h2{
-                font-size: 2em;
+                font-size: 3em;
                 color: #6600CC;
                 margin: 20px;
-                text-shadow: 3px 3px white, 1.5px 1.5px 15px #8800FF;
-                font-weight: bold;
+                text-shadow: 3px 3px white, 1.5px 1.5px 15px #8000FF;
             }
-            div{
-                width: 40%;
+            button{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 1.5em;
+                font-weight: bold;
+                outline-width: 3px;
+                border-radius: 10px;
+                border-style: none;
+                outline-style: solid;
+
+            }
+            .sectiondiv{
+                width: 50%;
                 margin: 10px;
                 background-color: #FFFFFF80;
                 padding: 5px;
                 border-radius: 20px;
             }
-            .searchtext{
+            .searchp{
                 margin: 0;
                 font-size: 1.5em;
-                color: #8800FF;
-                font-weight: bold;
+                color: #8000FF;
             }
             input{
                 height: 1.5em;
@@ -41,51 +49,70 @@
                 margin-left: 5px;
                 border-radius: 5px;
                 border-style: none;
-                color: #8800FF;
+                color: #8000FF;
                 font-weight: bold;
                 font-size: 1.5em;
                 font-family: 'Times New Roman', Times, serif;
             }
             input:focus{
-                outline-color: #8800FF;
+                outline-color: #8000FF;
                 outline-style: solid;
                 outline-width: 3px;
                 color: black;
             }
-            button{
+            .addbutton{
                 margin: 20px;
-                font-weight: bold;
-                font-size: 1.5em;
-                outline-width: 3px;
-                outline-style: solid;
-                outline-color: #C06090;
-                color: #C06090;
-                background-color: #FFC0D8;
-                border-style: none;
-                border-radius: 10px;
-                font-family: 'Times New Roman', Times, serif;
-                transition:0s 0.1s;
+                outline-color: #8000FF;
+                color: #8000FF;
+                background-color: #D0A0FF;
             }
-            button:hover{
-                outline-color: #804060;
-                color: #804060;
-                background-color: #FFD0E0;
+            .addbutton:hover{
+                outline-color: #400080;
+                color: #400080;
             }
-            button:active{
-                outline-color: red;
-                color: red;
+            .addbutton:active{
+                outline-color: #FF00C0;
+                color: #FF00C0;
                 background-color: white;
-                transition:0s;
+            }
+            #sectionslistul{
+                list-style: none;
+                margin-left: 0;
+                padding-left: 0;
+            }
+            .sectionslistbutton{
+                display: block;
+                width: 10%;
+                margin: 10px;
+                outline-color: #FF8080;
+                color: #FF8080;
+                background-color: #FFE0E0;
+                font-size: 1em;
+            }
+            .sectionslistbutton:hover{
+                outline-color: #FF4040;
+                color: #FF4040;
+                background-color: #FFF0F0;
             }
         </style>
     </head>
     <body>
         <h1>Language Creator</h1>
-        <div>
-            <h2>Main Concepts</h2>
-            <p class="searchtext">Search:</p>
-            <input>
-            <button>Add Main Concept</button>
+        <ul id="sectionslistul">
+            <li class="sectionslistli"><button id="rootformatssectionslistbutton" class="sectionslistbutton">Root Formats</button></li>
+            <li class="sectionslistli"><button id="rootssectionslistbutton" class="sectionslistbutton">Roots</button></li>
+        </ul>
+        <div id="rootformatsdiv" class="sectiondiv">
+            <h2 id="rootformatsh2">Root Formats</h2>
+            <p id="rootformatspsearch" class="searchp">Search:</p>
+            <input id="rootformatsinput">
+            <button id="rootformatsbuttonadd" class="addbutton">Add Root Format</button>
+        </div>
+        <div id="rootsdiv" class="sectiondiv">
+            <h2 id="rootsh2">Roots</h2>
+            <p id="rootspsearch" class="searchp">Search:</p>
+            <input id="rootsinput">
+            <button id="rootsbuttonadd" class="addbutton">Add Root</button>
         </div>
     </body>
 </html>
